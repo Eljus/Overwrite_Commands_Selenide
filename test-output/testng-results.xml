@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-06-11T08:03:24 BST" name="Testing" finished-at="2020-06-11T08:04:59 BST" duration-ms="94659">
+    <groups>
+    </groups>
+    <test started-at="2020-06-11T08:03:24 BST" name="Testing" finished-at="2020-06-11T08:04:59 BST" duration-ms="94659">
+      <class name="Demo_Test_To_Apply_Commands">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:Demo_Test_To_Apply_Commands@1ae8bcbc]" started-at="2020-06-11T08:03:24 BST" name="configuration" finished-at="2020-06-11T08:03:30 BST" duration-ms="6542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method is-config="true" signature="configure()[pri:0, instance:Demo_Test_To_Apply_Commands@1ae8bcbc]" started-at="2020-06-11T08:03:31 BST" name="configure" finished-at="2020-06-11T08:03:31 BST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configure -->
+        <test-method signature="testNewClick()[pri:0, instance:Demo_Test_To_Apply_Commands@1ae8bcbc]" started-at="2020-06-11T08:03:31 BST" name="testNewClick" finished-at="2020-06-11T08:04:58 BST" duration-ms="87857" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[No webdriver is bound to current thread: 29. You need to call open(url) first.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: No webdriver is bound to current thread: 29. You need to call open(url) first.
+at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:104)
+at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:73)
+at com.codeborne.selenide.impl.StaticDriver.getWebDriver(StaticDriver.java:37)
+at com.codeborne.selenide.impl.ElementFinder.getSearchContext(ElementFinder.java:86)
+at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)
+at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:50)
+at com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:87)
+at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:29)
+at com.globalActivities.OverrideCommands$MySetValue.execute(OverrideCommands.java:157)
+at com.globalActivities.OverrideCommands$MySetValue.execute(OverrideCommands.java:153)
+at com.codeborne.selenide.commands.Commands.execute(Commands.java:148)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)
+at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)
+at com.sun.proxy.$Proxy12.setValue(Unknown Source)
+at Demo_Test_To_Apply_Commands.testNewClick(Demo_Test_To_Apply_Commands.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:835)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewClick -->
+      </class> <!-- Demo_Test_To_Apply_Commands -->
+    </test> <!-- Testing -->
+  </suite> <!-- Testing -->
+</testng-results>

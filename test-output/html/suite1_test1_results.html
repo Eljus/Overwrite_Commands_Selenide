@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Testing</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Testing</h1>
+<p>
+  Test duration: 94.441s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">Demo_Test_To_Apply_Commands</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  testNewClick
+      </td>
+  <td class="duration">
+    87.857s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalStateException: No webdriver is bound to current thread: 29. You need to call open(url) first.</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:104)<br />
+              com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:73)<br />
+              com.codeborne.selenide.impl.StaticDriver.getWebDriver(StaticDriver.java:37)<br />
+              com.codeborne.selenide.impl.ElementFinder.getSearchContext(ElementFinder.java:86)<br />
+              com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:74)<br />
+              com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:50)<br />
+              com.codeborne.selenide.impl.WebElementSource.findAndAssertElementIsInteractable(WebElementSource.java:87)<br />
+              com.codeborne.selenide.commands.SetValue.execute(SetValue.java:29)<br />
+              com.globalActivities.OverrideCommands$MySetValue.execute(OverrideCommands.java:157)<br />
+              com.globalActivities.OverrideCommands$MySetValue.execute(OverrideCommands.java:153)<br />
+              com.codeborne.selenide.commands.Commands.execute(Commands.java:148)<br />
+              com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)<br />
+              com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)<br />
+              com.sun.proxy.$Proxy12.setValue(Unknown Source)<br />
+              Demo_Test_To_Apply_Commands.testNewClick(Demo_Test_To_Apply_Commands.java:25)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:567)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)<br />
+              java.base/java.lang.Thread.run(Thread.java:835)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  
+</body>
+</html>
