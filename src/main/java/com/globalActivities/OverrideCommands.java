@@ -1,41 +1,17 @@
 package com.globalActivities;
 
-import com.codeborne.selenide.Command;
 import com.codeborne.selenide.Driver;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.commands.*;
 import com.codeborne.selenide.impl.WebElementSource;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class OverrideCommands {
     public static class MyClick extends Click {
-        @Override
-        protected void click(Driver driver, WebElement element) {
-            waitUntilAllProgressBarsAreCompleted();
-            $(element).waitUntil(visible, 40000);
-            super.click(driver, element);
-            waitUntilAllProgressBarsAreCompleted();
-        }
-    }
-
-    public static class MyClick2 extends Click {
-        @Override
-        protected void click(Driver driver, WebElement element, int offsetX, int offsetY) {
-            waitUntilAllProgressBarsAreCompleted();
-            $(element).waitUntil(visible, 40000);
-            super.click(driver, element, offsetX, offsetY);
-            waitUntilAllProgressBarsAreCompleted();
-        }
-    }
-
-    public static class MyClick3 extends Click {
         @Override
         public Void execute(SelenideElement proxy, WebElementSource locator, Object[] args) {
             waitUntilAllProgressBarsAreCompleted();
@@ -164,7 +140,7 @@ public class OverrideCommands {
     }
 
     public static void applyNewCommands() {
-        Commands.getInstance().add("click", new MyClick3());
+        Commands.getInstance().add("click", new MyClick());
         Commands.getInstance().add("getText", new GetText());
         Commands.getInstance().add("should", new MyShould());
         Commands.getInstance().add("exists", new MyExists());
